@@ -1,0 +1,16 @@
+.dockerignore
+.DS_Store
+.git
+.gitignore
+.github
+__pycache__
+LICENSE
+VERSION
+README.md
+Changelog.md
+Makefile
+Dockerfile
+Dockerfile.archive
+docker-compose.yml
+docs
+.vscode

@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: demo-fastapi-service
+  namespace: backend
+spec:
+  type: LoadBalancer
+  selector:
+    app: demo-fastapi
+  ports:
+    - name: http
+      port: 8000
+      targetPort: 80

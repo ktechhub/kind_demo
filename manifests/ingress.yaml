@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: demo-fastapi-ingress
+  namespace: backend
+spec:
+  rules:
+  - host: demo-fastapi.kalkulus.local
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: demo-fastapi-service
+            port:
+              number: 80

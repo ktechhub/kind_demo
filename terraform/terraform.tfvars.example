@@ -1,0 +1,4 @@
+kind_cluster_name=cluster-name-here
+kind_cluster_config_path="/home/botcraft/.kube/config"
+ingress_nginx_helm_version="4.0.9"
+ingress_nginx_namespace=ingress-nginx

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-fastapi
+  namespace: backend
+  labels:
+    app: demo-fastapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-fastapi
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: demo-fastapi
+    spec:
+      containers:
+        - image: demo-fastapi:latest
+          name: demo-fastapi
+          imagePullPolicy: Never
+          resources: {}
+          ports:
+            - name: http
+              containerPort: 8000
+          # restartPolicy: Always
