@@ -9,7 +9,7 @@
 ## Kind Installation
 
 ### Single command to kind on ubuntu
-`for the fiab vms` --just run
+`for the ubuntu vms` --just run
 ```sh
 make setup-kind
 ```

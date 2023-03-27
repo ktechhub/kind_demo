@@ -1,7 +1,7 @@
 variable "kind_cluster_name" {
   type        = string
   description = "The name of the cluster."
-  default     = "fiab-cluster"
+  default     = "demo-cluster"
 }
 
 variable "kind_cluster_config_path" {
