@@ -114,7 +114,7 @@ docker run \
 
 #### Port-forward a pod to check if it works
 ```sh
-kubectl port-forward po/demo-fastapi-6678bbbd54-xbqnf :8000 -n backend
+kubectl port-forward po/demo-fastapi-6678bbbd54-5t97r 8000:8000 -n backend
 ```
 
 ## Build Image

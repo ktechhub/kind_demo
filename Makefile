@@ -13,7 +13,9 @@ setup-kind:
 # Terraform Specific
 terraform-init:
 	cd terraform && \
-	terraform init
+	terraform init && \
+	cd ..
+
 
 terraform-plan:
 	cd terraform && \
@@ -51,7 +53,7 @@ kind-ingress-setup:
 	kubectl wait --namespace ingress-nginx \
 	--for=condition=ready pod \
 	--selector=app.kubernetes.io/component=controller \
-	--timeout=100s
+	--timeout=90s
 
 kind-destroy-cluster:
 	kind delete cluster --name demo-cluster
